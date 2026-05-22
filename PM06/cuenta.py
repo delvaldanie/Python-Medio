@@ -1,7 +1,11 @@
+
 class Cuenta:
     def __init__(self, titular, cantidad):
         self.titular = titular
-        self.cantidad = cantidad
+        if cantidad >=0:
+            self.cantidad = cantidad
+        else:
+            self.cantidad = 0
     
     def mostrar(self):
         return (f"Titular {self.titular}, Catidad {self.cantidad}")
